@@ -1,0 +1,15 @@
+Build a PostgreSQL with libpq dev
+
+In postgresql directory
+1. make distclean && ./configure CFLAGS='-arch i386 -arch x86_64 -arch ppc' --with-libraries=/Developer/SDKs/MacOSX10.5.sdk/usr/lib --with-includes=/Developer/SDKs/MacOSX10.5.sdk/usr/include --with-openssl --with-bonjour && make
+2. cd src/interfaces/libpq/
+3. make (finir de compiler la lb meme apres erreurs)
+
+Display lib content
+- nm -A 'lib'
+- otool -L 'lib' (dylib)
+
+
+iPhone Notes :
+
+"./configure --prefix=/usr/local/iphone --host=arm-apple-darwin9 --disable-shared --disable-crypto-auth --without-gnutls --without-ssl --without-zlib --without-libssh2 --disable-ipv6 --disable-manual --disable-telnet --disable-tftp --disable-ldap --disable-file --disable-ftp CC=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/arm-apple-darwin9-gcc-4.0.1 CFLAGS="-arch armv6 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -fmessage-length=0 -fvisibility=hidden -miphoneos-version-min=2.1 -gdwarf-2 -mthumb -I/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.1.sdk/usr/include/libxml2 -I/Library/iPhone/include -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.1.sdk" CPP=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/cpp AR=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/ar
